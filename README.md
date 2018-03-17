@@ -39,7 +39,7 @@ python3 netClipClient.py --help
 
 ### Start the Server Side
 
-You must start the server side before starting the client side, use "-p" to specify which port is used to listen the connection:
+You must start the server side **firstly** before starting the client side, use "-p" to specify which port is used to listen the connection:
 
 ```
 python3 netClipServer.py -p 16068
