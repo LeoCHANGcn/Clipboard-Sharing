@@ -8,14 +8,14 @@
 
 First, you need to configure a python 3 environment.
 
-| Environment | netClipClient.py        |   netClipServer.py   |
-| :---------: | ----------------------- | :------------------: |
-|   Windows   | clipboard               |          \           |
-|    Linux    | xclip, PyQt5, clipboard | Same with left cell. |
-|     Mac     | clipboard               |          \           |
-|             |                         |                      |
+| Environment | netClipClient.py |    netClipServer.py     |
+| :---------: | ---------------- | :---------------------: |
+|   Windows   | clipboard        |            \            |
+|    Linux    | clipboard        | xclip, PyQt5, clipboard |
+|     Mac     | clipboard        |            \            |
+|             |                  |                         |
 
-Run the following commands to prepare the environment for both server side and client side of Linux system:
+Run the following commands to prepare the environment for **both server side and client side of Linux system**:
 
 ```shell
 sudo apt-get install xclip
@@ -23,7 +23,7 @@ sudo pip3 install PyQt5==5.8.0
 sudo pip3 install clipboard
 ```
 
-Use "pip install clipboard" to install clipboard for Windows and Mac.
+Use "pip3 install clipboard" to install clipboard for Windows and Mac **client side**.
 
 ## How to use?
 
