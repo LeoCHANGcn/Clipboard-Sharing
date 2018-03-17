@@ -8,12 +8,12 @@
 
 First, you need to configure a python 3 environment.
 
-| Environment | netClipClient.py |    netClipServer.py     |
-| :---------: | ---------------- | :---------------------: |
-|   Windows   | clipboard        |            \            |
-|    Linux    | clipboard        | xclip, PyQt5, clipboard |
-|     Mac     | clipboard        |            \            |
-|             |                  |                         |
+| Environment | netClipClient.py        |    netClipServer.py     |
+| :---------: | ----------------------- | :---------------------: |
+|   Windows   | clipboard               |            \            |
+|    Linux    | xclip, PyQt5, clipboard | xclip, PyQt5, clipboard |
+|     Mac     | clipboard               |            \            |
+|             |                         |                         |
 
 Run the following commands to prepare the environment for **both server side and client side of Linux system**:
 
