@@ -1,6 +1,6 @@
 # Share Clipboard Between 2 Computers
 
-> This project is designed to share the content of clipboard between 2 computers located in the same  network. The server script is only designed for **Linux and Mac**, and the client script is designed for **Linux, Max and Windows**.
+> This project is designed to share the content of clipboard between 2 computers located in the same  network. The server script is only designed for **Linux and Mac**, and the client script is designed for **Linux, Mac and Windows**.
 >
 > But now, this project only support raw string data in clipboard. And the string can't be too long. I will add more options in the future.
 
@@ -8,11 +8,11 @@
 
 First, you need to configure a python 3 environment.
 
-| Environment | netClipClient.py        |    netClipServer.py     |
-| :---------: | ----------------------- | :---------------------: |
-|   Windows   | clipboard               |            \            |
+| Environment |    netClipClient.py     |    netClipServer.py     |
+| :---------: | :---------------------: | :---------------------: |
+|   Windows   |        clipboard        |            \            |
 |    Linux    | xclip, PyQt5, clipboard | xclip, PyQt5, clipboard |
-|     Mac     | clipboard               |            \            |
+|     Mac     |        clipboard        |    xclip, clipboard     |
 |             |                         |                         |
 
 Run the following commands to prepare the environment for **both server side and client side of Linux system**:
@@ -23,7 +23,9 @@ sudo pip3 install PyQt5==5.8.0
 sudo pip3 install clipboard
 ```
 
-Use "pip3 install clipboard" to install clipboard for Windows and Mac **client side**.
+Use "pip3 install clipboard" to install clipboard for **Windows and Mac client side**.
+
+Use brew to install xclip for **Mac server side**.
 
 ## How to use?
 
