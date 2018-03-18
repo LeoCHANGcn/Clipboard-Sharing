@@ -66,23 +66,24 @@ class NetClipboard():
             if tmp != self.clip:
                 self.clip = tmp
                 sock.send(self.clip.encode('utf-8'))
-
-            tmp = sock.recv(self.option.length).decode('utf-8')
-
-            if tmp == "0" or tmp == '00':
-                sock.send("0".encode('utf-8'))
-            elif tmp != self.clip:
-                self.clip = tmp
-
-                with open(os.path.join(self.path,"clip.txt"), 'w', encoding='utf-8') as f:
-                    f.write(self.clip)
-                    f.close()
-                clipPath = os.path.join(self.path,"clip.txt")
-                sbp.call("xclip -sel c < " + clipPath, shell=True)
-                #cpb.copy(self.clip)
-                sock.send("0".encode('utf-8'))
+                
             else:
-                sock.send("1".encode('utf-8'))
+                tmp = sock.recv(self.option.length).decode('utf-8')
+
+                if tmp == "0" or tmp == '00':
+                    sock.send("0".encode('utf-8'))
+                elif tmp != self.clip:
+                    self.clip = tmp
+
+                    with open(os.path.join(self.path,"clip.txt"), 'w', encoding='utf-8') as f:
+                        f.write(self.clip)
+                        f.close()
+                    clipPath = os.path.join(self.path,"clip.txt")
+                    sbp.call("xclip -sel c < " + clipPath, shell=True)
+                    #cpb.copy(self.clip)
+                    sock.send("0".encode('utf-8'))
+                else:
+                    sock.send("1".encode('utf-8'))
 
             time.sleep(self.option.interval)
         s.close()
