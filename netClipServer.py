@@ -74,7 +74,7 @@ class NetClipboard():
             elif tmp != self.clip:
                 self.clip = tmp
 
-                with open(os.path.join(self.path,"clip.txt"), 'w') as f:
+                with open(os.path.join(self.path,"clip.txt"), 'w', encoding='utf-8') as f:
                     f.write(self.clip)
                     f.close()
                 clipPath = os.path.join(self.path,"clip.txt")
